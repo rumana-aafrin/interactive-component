@@ -42,5 +42,5 @@ In future projects, I aim to focus on:
   <li>Enhancing my CSS skills for complex layouts</li>
 </ul>
 
-x<h3 align="left">Acknowledgments</h3>
+<h3 align="left">Acknowledgments</h3>
 I'd like to acknowledge the Frontend Mentor community for providing this free challenge to test my coding skills.
