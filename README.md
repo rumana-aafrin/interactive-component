@@ -14,7 +14,7 @@ Users should be able to:
 </ul>
 
 <h3 align="left">Screenshot</h3>
-Screenshot
+<img src= "./design/desktop-design.jpg" alt="Screenshot">
 
 <h3 align="left">Built With</h3>
 <ul align="left">
