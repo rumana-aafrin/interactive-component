@@ -1,68 +1,80 @@
-*{
+/* Reset box-sizing */
+* {
     box-sizing: border-box;
 }
-body{
+
+/* Flex layout for body */
+body {
+    font-family: 'Overpass', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     background: #141519;
 }
-.rating-state{
-    display: flex;
-    padding: 40px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    flex-shrink: 0;
-    border-radius: 60px;
-    background: #1F2630;
-}
-h4,.description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-/* .numbers{
-    color: #7C8590;
-    font-family: Inter;
-    font-size: 17.502px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 35.004px; /* 200% */
-    /* letter-spacing: 0.7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:16px 8px;
-    flex-shrink: 0;
-    border-radius: 109.389px;
-    background: #262F36;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-} */ */
 
+/* Common styles for h2 and description */
+.rating-description,
+#rating-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-self: stretch;
+}
+
+/* Set the color of description */
+.rating-description, .thankyou-description {
+    color: #8a909a;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0.72px;
+}
+#rating-heading, #thankyou-heading{
+    color: #FBFFFF;
+}
+
+/* Common styles for numbers */
 .numbers {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
+/* Common styles for number spans */
 .numbers span {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #262F36;
-    color: #7C8590;
-    font-family: Inter;
+    background-color: #262f36;
+    color: #7c8590;
     font-size: 17.502px;
     font-weight: 600;
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.button{
+
+/* Hover styles for number spans */
+.numbers span:hover {
+    color: #ffffff;
+    background-color: #f98027;
+}
+
+/* Active styles for number spans */
+.numbers span:active{
+    color: #ffffff;
+    background-color: #7c8897;
+}
+
+
+/* Button styles */
+#my-button {
     display: flex;
     padding: 12px 8px;
     justify-content: center;
@@ -70,11 +82,77 @@ h4,.description{
     align-self: stretch;
     font-weight: 600;
     border-radius: 40px;
-    background: #F98027;
+    background: #f98027;
 }
 
-.button:hover {
+/* Button hover styles */
+#my-button:hover {
     background-color: #ffffff;
-    color:#F98027;
+    color: #f98027;
 }
-      
+
+/* Common styles for result message and illustration */
+.result-message,
+#illustration {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 50%;
+    background: #272e38;
+    color: #9d4b0f;
+    font-family: Inter;
+    font-size: 17.502px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35.004px;
+    /* 200% */
+    letter-spacing: 0.7px;
+}
+
+/* Common styles for rating-state and thankyou-state */
+.rating-state,
+.thankyou-state {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #1f2630;
+    width: 28%;
+    max-width: 600px;
+    /* Set a maximum width for larger screens */
+}
+
+/* Unique styles for rating-state */
+.rating-state {
+    align-items: flex-start;
+}
+.rating-description, #rating-heading {
+    text-align: left;
+}
+
+
+/* Unique styles for thankyou-state */
+.thankyou-state {
+    align-items: center;
+}
+
+/* Hide thankyou-state initially */
+.thankyou-state {
+    display: none;
+}
+.thankyou-description, #thankyou-heading {
+    text-align: center;
+}
+
+
+/* Media query for larger screens */
+@media only screen and (min-width: 768px) {
+    .rating-state,
+    .thankyou-state {
+        width: 28%;
+        
+    }
+}

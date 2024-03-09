@@ -6,9 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+ 
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -18,10 +18,10 @@
 
   <!-- Rating state start -->
 <div class="rating-state">
-  <img src="./images/icon-star.svg">
-  <h4>How did we do?</h4>
+  <img  id="icon" src="./images/icon-star.svg">
+  <h2 id="rating-heading">How did we do?</h2>
 
-  <p class="description">Please let us know how we did with your support request. All feedback is appreciated 
+  <p class="rating-description">Please let us know how we did with your support request. All feedback is appreciated 
     to help us improve our offering!</p>
 
     <span class="numbers">
@@ -32,24 +32,25 @@
       <span>5</span>
     </span>
 
-  <button class="button">SUBMIT</button>
+  <button id="my-button">SUBMIT</button>
+ 
 </div>
   <!-- Rating state end -->
-
-</body>
-</html>
+    <script src="script.js"></script>
 
 
 
-  <!-- Thank you state start
 
-  You selected <!-- Add rating here --> out of 5
+  <!-- Thank you state start -->
+  <div class="thankyou-state">
+    <img id="Illustration" src="./images/illustration-thank-you.svg">
+      <p class="result-message">You selected <!-- Add rating here --> out of 5</p>
 
-  <!-- Thank you! -->
+  <h2 id="thankyou-heading">Thank you!</h2> 
 
-  <!-- We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
-
+  <p class="thankyou-description">We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
+  </div>
   <!-- Thank you state end -->
 
 <!--   
@@ -57,3 +58,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->  
+
+</body>
+</html>
+
